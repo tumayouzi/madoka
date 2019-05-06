@@ -196,10 +196,10 @@ if [ $ans -eq 1 ]; then
 	cd "${workdir}"
 	mkdir -p ${ROMDIR}/${device}
 	mkdir -p ${ROMDIR}/${device}/changelog
-	mv -v ${newzipname}.zip ${ROMDIR}/${device}/${newzipname}.zip
-	mv -v ${builddir}/out/target/product/${device}/${zipname}.zip.md5sum ${ROMDIR}/${device}/${newzipname}.zip.md5sum
+	mv -v ../${newzipname}.zip ${ROMDIR}/${device}/${newzipname}.zip
+	mv -v ../${builddir}/out/target/product/${device}/${zipname}.zip.md5sum ${ROMDIR}/${device}/${newzipname}.zip.md5sum
 	# changelogも上げる
-	mv -v ${builddir}/out/target/product/${device}/Changelog.txt ${ROMDIR}/${device}/changelog/changelog_${newzipname}.txt
+	mv -v ../${builddir}/out/target/product/${device}/Changelog.txt ${ROMDIR}/${device}/changelog/changelog_${newzipname}.txt
 
 	echo -e "\n"
 fi

@@ -26,7 +26,7 @@ PUSHBULLET_TOKEN=YOUR_ACCESS_TOKEN
 TWEET_TAG="AndroidBuildBattle"
 
 # 作っとく
-mkdir -p ${LOGDIR}/success ${LOGDIR}/fail ${ROMDIR}
+mkdir -p ${LOGDIR}/success ${LOGDIR}/fail ${ROMDIR} ${ROMDIR}/changelog
 
 # 実行時の引数が正しいかチェック
 if [ $# -lt 2 ]; then
@@ -199,7 +199,7 @@ if [ $ans -eq 1 ]; then
 	mv -v ../${newzipname}.zip ${ROMDIR}/${device}/${newzipname}.zip
 	mv -v ../${builddir}/out/target/product/${device}/${zipname}.zip.md5sum ${ROMDIR}/${device}/${newzipname}.zip.md5sum
 	# changelogも上げる
-	mv -v ../${builddir}/out/target/product/${device}/Changelog.txt ${ROMDIR}/${device}/changelog/changelog_${newzipname}.txt
+	mv -v ../${builddir}/out/target/product/${device}/changelog_${device}.txt ${ROMDIR}/${device}/changelog/changelog_${newzipname}.txt
 
 	echo -e "\n"
 fi

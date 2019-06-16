@@ -25,8 +25,6 @@ PUSHBULLET_TOKEN=YOUR_ACCESS_TOKEN
 # ツイート用のハッシュタグを必要に応じて変えてください
 TWEET_TAG="AndroidBuildBattle"
 
-# 作っとく
-mkdir -p ${LOGDIR}/success ${LOGDIR}/fail ${ROMDIR} ${ROMDIR}/changelog
 
 # 実行時の引数が正しいかチェック
 if [ $# -lt 2 ]; then
@@ -43,6 +41,9 @@ fi
 builddir=$1
 device=$2
 shift 2
+
+# 作っとく
+mkdir -p ${LOGDIR}/success ${LOGDIR}/fail ${ROMDIR} ${ROMDIR}/${device}/changelog
 
 while getopts :tscx argument; do
 case $argument in

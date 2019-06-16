@@ -12,11 +12,6 @@
   - log, rom出力先ディレクトリを変数で指定
   - changelogもrom出力先にコピー
 
-### ちなみに
-
-弊ビルドPCのホストネームは[山城改](https://dic.nicovideo.jp/id/5507571)です。  
-やましろのしっぽの鈴鳴らして遊びたい。
-
 ## ライセンス
 
 - **madoka** は The MIT License で提供されます。

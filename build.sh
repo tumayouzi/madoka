@@ -98,6 +98,13 @@ elif [ $builddir = floko ]; then
         zipname="$(get_build_var LINEAGE_VERSION)"
         newzipname="Floko-v${vernum}-${device}-${filetime}-$(get_build_var FLOKO_BUILD_TYPE)"
 
+elif [ $builddir = floko_staging ]; then
+        vernum="$(get_build_var FLOKO_VERSION)"
+        source="floko-v${vernum}"
+        short="${source}"
+        zipname="$(get_build_var LINEAGE_VERSION)"
+        newzipname="Floko_staging-v${vernum}-${device}-${filetime}-$(get_build_var FLOKO_BUILD_TYPE)"
+
 else
 # 一応対処するけど他ROMについては上記を参考にちゃんと書いてもらわないと後がめんどい
 	source=$builddir

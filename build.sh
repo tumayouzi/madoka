@@ -136,7 +136,7 @@ else
 	ans=0
 	statusdir="fail"
 	endstr=$(tail -n 3 "${LOGDIR}/$filename" | tr -d '\n' | sed -r 's/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g' | sed 's/#//g' | sed 's/make failed to build some targets//g' | sed 's/^[ ]*//g')
-	statustw="📣${device} 向け ${source} のビルドに失敗しました 📛 :very_sad: 📛"
+	statustw="📣${device} 向け ${source} のビルドに失敗しました :very_sad:"
 fi
 
 # jack-server絶対殺すマン

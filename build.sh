@@ -64,7 +64,7 @@ prebuilts/misc/linux-x86/ccache/ccache -M ${CCACHE_CAP}
 
 # repo sync
 if [ "$sync" = "true" ]; then
-	repo sync -j8 -c -f --force-sync --no-clone-bundle
+	repo sync -j8 -c --force-sync --no-clone-bundle
 	echo -e "\n"
 fi
 
